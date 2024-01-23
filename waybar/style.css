@@ -1,0 +1,129 @@
+* {
+  font-family: "JetBrains Mono Nerd Font";
+  font-size: 12pt;
+  font-weight: bold;
+  border-radius: 5px;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+@keyframes blink_red {
+  to {
+    background-color: rgb(242, 143, 173);
+    color: rgb(26, 24, 38);
+  }
+}
+.warning, .critical, .urgent {
+  animation-name: blink_red;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+window#waybar {
+  background-color: transparent;
+}
+window > box {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  background-color: #504945;
+  border-bottom: 1px solid #ddc7a1;
+  border-top: 1px solid #ddc7a1; 
+  border-left: 1px solid #ddc7a1;
+  border-right: 1px solid #ddc7a1;
+}
+#workspaces {
+  padding-left: 0px;
+  padding-right: 4px;
+}
+#workspaces button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+#workspaces button.active{
+  color: #a9b665;
+}
+#workspaces button.urgent {
+  color: rgb(26, 24, 38);
+}
+#workspaces button.hover{
+  background-color: transparent;
+}
+tooltip {
+  background: #665c54;
+}
+tooltip label {
+  color: #ddc7a1;
+}
+#custom-launcher {
+  padding-left: 8px;
+  padding-right: 6px;
+  color: #ddc7a1;
+}
+#mode, #clock, #memory, #temperature,#cpu,#mpd, #idle_inhibitor, #temperature, #backlight, #pulseaudio, #network, #battery, #custom-cava-internal {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* #mode { */
+/* 	margin-left: 10px; */
+/* 	background-color: rgb(248, 189, 150); */
+/*     color: rgb(26, 24, 38); */
+/* } */
+#memory {
+  color: #7daea3;
+}
+#cpu {
+  color: #d3869b;
+}
+#clock {
+  color: #ddc7a1;
+}
+#idle_inhibitor {
+  color: rgb(221, 182, 242);
+}
+#temperature {
+  color: rgb(150, 205, 251);
+}
+#backlight {
+  color: #e78a4e 
+}
+#pulseaudio {
+  color: #d4be98;
+}
+#network {
+  color: #89b482;
+}
+
+#network.disconnected {
+  color: rgb(255, 255, 255);
+}
+#battery.charging, #battery.full, #battery.discharging {
+  color: #d8a657;
+}
+#battery.critical:not(.charging) {
+  color: rgb(242, 143, 173);
+}
+#custom-powermenu {
+  color: #ea6962;
+  padding-right: 20px;
+  padding-left: 10px;
+}
+#tray {
+  padding-right: 8px;
+  padding-left: 10px;
+}
+#mpd.paused {
+  color: #414868;
+  font-style: italic;
+}
+#mpd.stopped {
+  background: transparent;
+}
+#mpd {
+  color: #c0caf5;
+}
+#custom-cava-internal{
+  font-family: "JetBrains Mono Nerd Font" ;
+}
